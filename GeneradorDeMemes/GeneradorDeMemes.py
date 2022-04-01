@@ -1,13 +1,13 @@
-from google.colab.patches import cv2_imshow
+#from google.colab.patches import cv2_imshow
 import numpy as np
 import random
 import matplotlib.pyplot as plt
 import cv2
 
 Frases = ["No y tu mama", "¿A que venia?", "ia stoy arto",
-          "tuvo weno el cumpleanos", "te falta calle", "XD", "Mucho texto", "En fin, la hipocresia"]
+          "tuvo weno el cumpleanos", "te falta calle", "XD", "Mucho texto", "En fin, la hipocresia", "respeta el flow"]
 
-random.seed(10)
+
 N = np.random.randint(0, 50)
 n = np.random.randint(0, len(Frases))
 print(N)
@@ -33,4 +33,4 @@ cv2.putText(resized, Frases[n],
             thickness,
             lineType)
 
-cv2_imshow(resized)
+cv2.imshow("Meme", resized)
