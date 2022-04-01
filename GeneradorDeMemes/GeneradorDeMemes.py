@@ -2,18 +2,18 @@ from google.colab.patches import cv2_imshow
 import numpy as np
 import random
 import matplotlib.pyplot as plt
-import numpy as np
 import cv2
 
 Frases = ["No y tu mama", "¿A que venia?", "ia stoy arto",
-          "tuvo weno el cumpleanos", "te falta calle", "XD"]
+          "tuvo weno el cumpleanos", "te falta calle", "XD", "Mucho texto", "En fin, la hipocresia"]
 
 random.seed(10)
 N = np.random.randint(0, 50)
 n = np.random.randint(0, len(Frases))
 print(N)
 
-img = cv2.imread(str(N) + ".jpg")
+
+img = cv2.imread("Datos/" + str(N) + ".jpg")
 forma = np.shape(img)
 dim = (500, 500)
 resized = cv2.resize(img, dim, interpolation=cv2.INTER_AREA)
